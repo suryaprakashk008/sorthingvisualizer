@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Visualizer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <canvas id="sortCanvas" width="800" height="400"></canvas>
+        <div class="controls">
+            <button onclick="startSorting('bubble')">Bubble Sort</button>
+            <button onclick="startSorting('selection')">Selection Sort</button>
+            <button onclick="startSorting('insertion')">Insertion Sort</button>
+            <button onclick="startSorting('quick')">Quick Sort</button>
+            <button onclick="startSorting('merge')">Merge Sort</button>
+            <button onclick="startSorting('radix')">Radix Sort</button>
+
+            
+            <label class="label-color" for="sizeRange ">Array Size:</label>
+            <input type="range" id="sizeRange" min="10" max="200" value="100" oninput="resizeArray(this.value)">
+
+        
+            <label class="label-color" for="speedRange">Sorting Speed (ms):</label>
+            <input type="range" id="speedRange" min="1" max="500" value="30" oninput="adjustSpeed(this.value)">
+        </div>
+    </div>
+    <script src="sorting.js"></script>
+</body>
+</html>
